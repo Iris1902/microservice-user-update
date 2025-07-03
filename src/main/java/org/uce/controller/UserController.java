@@ -81,4 +81,10 @@ public class UserController {
         user.persist();
         return Response.ok(user).build();
     }
+
+    @GET
+    @Path("/health")
+    public Response healthCheck() {
+        return Response.ok("Service is up and running").build();
+    }
 }
